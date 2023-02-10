@@ -1,0 +1,14 @@
+<div class="div-principal d-flex flex-row justify-content-center">
+    <div class="div-item-lista" *ngFor="let item of modelList">
+        <div [ngStyle]="getImageStyle(item)" class="div-image-item"></div>
+        <div class="div-descricao">
+            <span class="titulo-texto">{{item.nome}}</span>
+            <div class="descricao-texto">{{item.descricao}}</div>
+
+            <div>
+                <app-avaliacao-component [nota]="item.rating"></app-avaliacao-component>
+            </div>
+            <a class="link-detalhes" (click)="getDetalhes(item)" [routerLink]="[detailLink]">MAIS INFORMAÇÕES</a>
+        </div>
+    </div>
+</div>

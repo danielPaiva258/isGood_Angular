@@ -1,0 +1,36 @@
+@import "../../common/common.css";
+
+.div-principal-detalhes-header{
+    padding: 1rem;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    border-radius: 4px;
+    color: rgba(0, 0, 0, 0.87);
+    margin: 4px;
+}
+
+.titulo-detalhes {
+    font-size: 1.5rem;
+    display: block;
+    font-weight: 500;
+    height: 1.2em;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+}
+
+.imagem-detalhes{
+    height: 200px;
+    width: 60% !important;
+    background-position: center center;
+    background-size: cover;
+}
+
+.div-avaliacao {
+    margin-top: 1.0rem;
+    margin-bottom: 1.5rem;
+}
+
+.descricao-detalhes {
+    margin-bottom: 1.5rem;
+}
+
+

@@ -1,0 +1,20 @@
+.topbar {
+    background-color: #E16206 !important;
+    top: 0;
+    height: 70px;
+    padding-left: 15%;
+    color: white !important;
+}
+
+.topBarTitle {
+    color: inherit;
+    letter-spacing: .3rem;
+    font-family: monospace;
+    font-weight: 700;
+    color: 'inherit';
+    text-decoration: 'none';
+}
+
+.topBarMenus {
+    color: inherit;
+}

@@ -1,0 +1,15 @@
+<div class="text-center div-principal-detalhes-header">
+    <span class="titulo-detalhes ">{{model.nome}}</span>
+    <!-- <div class="center">
+        <div class="col-3"></div> -->
+        <div  [ngStyle]="getImageStyle()" class="imagem-detalhes center"></div>
+        <!-- <div class="col-3"></div>
+    </div> -->
+    <div class="div-avaliacao">
+        <span>Avaliação Atual</span>
+        <app-avaliacao-component [nota]="model.rating"></app-avaliacao-component>
+    </div>
+
+    <span>{{model.descricao}}</span><br><br>
+    <span *ngIf="model.endereco">Endereço: {{model.endereco}}</span>
+</div>

@@ -1,0 +1,26 @@
+<div *ngIf="itemDetalhesHeader" class="text-center div-principal-detalhes col-12 ">
+    <div class="center">
+        <app-detalhes-header [model]="itemDetalhesHeader"></app-detalhes-header>
+
+        <span>Avaliações:</span>
+        <div class="row">
+            <div *ngFor="let avaliacao of produto.avaliacoes" class="bordaSombreada col-3 div-avaliacao">
+                <div class="row div-header-card">
+                    <div class="col-2">
+                        <img class="profile-img" src="../../../assets/images/profile.svg">
+                    </div>
+                    <div class="col-8 avaliacao-card-rating">
+                        <div class="div-rating">
+                            <app-avaliacao-component [nota]="avaliacao.rating"></app-avaliacao-component> 
+                        </div>
+                      
+                        <span class="avaliacao-nome-usuario">Nome do usuário</span>
+                   
+                    </div>
+                </div>
+                <span class="avalizacao-descricao">{{avaliacao.descricao}}</span>
+            </div>
+        </div>
+    </div>
+    
+</div>
