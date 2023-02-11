@@ -8,7 +8,7 @@
             <div>
                 <app-avaliacao-component [nota]="item.rating"></app-avaliacao-component>
             </div>
-            <a class="link-detalhes" (click)="getDetalhes(item)" [routerLink]="[detailLink]">MAIS INFORMAÇÕES</a>
+            <a class="link-detalhes"  [routerLink]="[detailLink]" [queryParams]="{id:item.id}">MAIS INFORMAÇÕES</a>
         </div>
     </div>
 </div>

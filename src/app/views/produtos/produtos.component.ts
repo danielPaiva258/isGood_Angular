@@ -15,8 +15,6 @@ export class ProdutosComponent implements OnInit{
   produtoDetalhado?:Produto;
 
   constructor(
-    private router: Router,
-    private route: ActivatedRoute,
     private produtoService: ProdutoService,
   ){}
 
@@ -30,13 +28,10 @@ export class ProdutosComponent implements OnInit{
   convertProdutoListToItemList(produto:Produto[]){
     let itemList:ItemList[]=[];
     produto.forEach((produto: Produto) => {
-      let item:ItemList = {nome:produto.nome ,descricao:produto.descricao,rating:produto.rating,image:produto.foto, data:produto};
+      let item:ItemList = {id:produto.id, nome:produto.nome ,descricao:produto.descricao,rating:produto.rating,image:produto.foto, data:produto};
       itemList.push(item);
     });
     return itemList;
   }
 
-  getDetalhesProduto(produtoSelecionado:Produto) {
-    this.produtoService.setProdutoSelecionado (produtoSelecionado);
-  }
 }

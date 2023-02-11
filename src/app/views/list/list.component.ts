@@ -12,9 +12,9 @@ export class ListComponent {
   @Input() detailLink?:string;
   @Output() onDetalhesClick: EventEmitter<any> = new EventEmitter();
 
-  getDetalhes(item: any): void {
-    this.onDetalhesClick.emit(item.data);
-  }  
+  // getDetalhes(item: any): void {
+  //   this.onDetalhesClick.emit(item.data);
+  // }  
 
   getImageStyle(item:any){
     return {'background-image': 'url('+item.image+')'};
@@ -22,6 +22,7 @@ export class ListComponent {
 }
 
 export interface ItemList {
+  id: number,
   nome:string,
   descricao:string,
   rating:number,

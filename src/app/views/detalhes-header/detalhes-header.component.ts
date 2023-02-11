@@ -11,7 +11,6 @@ export class DetalhesHeaderComponent {
   @Input() model!:ItemDetalhes;
 
   getImageStyle(){
-    console.log(this.model.foto)
     return {'background-image': 'url('+this.model.foto+')'};
   }
 }

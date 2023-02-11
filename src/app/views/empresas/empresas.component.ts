@@ -18,24 +18,16 @@ export class EmpresasComponent implements OnInit{
   ngOnInit(): void {
     this.empresaService.getEmpresasList().subscribe(event => {
       this.empresaList = event;
-      console.log(this.empresaList)
       this.itemList = this.convertEmpresaListToItemList();
-      console.log(this.itemList)
     });
   }
 
   convertEmpresaListToItemList(){
     let itemList:ItemList[]=[];
     this.empresaList.forEach((empresa: Empresa) => {
-      let item:ItemList = {nome:empresa.nome ,descricao:empresa.apresentacao,rating:empresa.rating,image:empresa.logo, data:empresa};
-      console.log(item)
+      let item:ItemList = {id:empresa.id, nome:empresa.nome ,descricao:empresa.apresentacao,rating:empresa.rating,image:empresa.logo, data:empresa};
       itemList.push(item);
-      console.log(itemList)
     });
     return itemList;
-  }
-
-  getDetalhesEmpresa(empresaSelecionada:Empresa) {
-    this.empresaService.setEmpresaSelecionado(empresaSelecionada);
   }
 }

@@ -9,22 +9,11 @@ import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 })
 export class ProdutoService {  
 
-  private produtoSelecionadoSource = new BehaviorSubject<any>({});
-  produtoSelecionado = this.produtoSelecionadoSource.asObservable();
-
   constructor(
     private http: HttpClient
   ) { }
 
   getProducts(){
-    return this.http.get<Produto>('http://localhost:8080/produto/listar');
-  }
-
-  setProdutoSelecionado (produto:Produto) {
-    this.produtoSelecionadoSource.next(produto);
-  }
-
-  getProdutoSelectionado() {
-    return this.produtoSelecionado;
+    return this.http.get<Produto[]>('http://localhost:8080/produto/listar');
   }
 }

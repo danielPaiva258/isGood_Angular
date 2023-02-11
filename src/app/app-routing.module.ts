@@ -22,6 +22,10 @@ const routes: Routes = [
     component:DetalhesProdutosComponent
   },
   {
+    path:"detalhesProdutos/:id",
+    component:DetalhesProdutosComponent
+  },
+  {
     path:"detalhesEmpresas",
     component:DetalhesEmpresasComponent
   }
